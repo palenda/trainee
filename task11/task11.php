@@ -1,8 +1,17 @@
 <?php
 
 class Path {
-function shortestPathBinaryMatrix($grid)
+function shortestPathBinaryMatrix()
 {
+        for ($i = 0; $i<10; $i++) {
+        for ($j = 0; $j<10; $j++)
+        {
+            $grid[$i][$j] = rand(0, 1);
+            echo $grid[$i][$j]." ";
+        }
+        echo "<br>";
+    }
+
 $rows = count($grid);
 $cols = count($grid[0]);
 if($grid[0][0] == 1 || $grid[$rows-1][$cols-1] == 1)
