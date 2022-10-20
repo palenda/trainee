@@ -6,6 +6,6 @@ function recursion(int $i, int $n){
     $i++;
     if ($i <= $n){
         recursion($i, $n);
-    }
+    } else echo "Error";
 }
 
