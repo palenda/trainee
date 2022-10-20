@@ -3,11 +3,10 @@
 
 function daysCounter(string $date)
 {
+    $to_date = strtotime($date);
     $today = strtotime(date('d-m-Y'));
-    $birth = strtotime($date);
-    $birthday = date_create(date("Y", $today) . "-" . date("m", $birth) . "-" . date("d", $birth));
-    $difference = date_diff(date_create(date("d-m-Y", $today)), $birthday);
-    echo $difference->format("%R%a days");
+    $day_diff = $to_date - $today;
+    echo floor($day_diff/(60*60*24))." day to birthday left";
 }
 
 
